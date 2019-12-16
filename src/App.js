@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar';
 import HomePage from './components/homepage/HomePage';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import TshirtDetails from './components/tshirts/TshirtDetails';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/' component={HomePage} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
+          <Route path='/tshirts/:id' component={TshirtDetails} />
         </Switch>
       </div>
     </BrowserRouter>
