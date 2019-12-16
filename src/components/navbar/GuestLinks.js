@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 const GuestLinks = () => {
     return (
         <ul className="right">
-            <li><NavLink to='/'>Регистрирай се</NavLink></li>
-            <li><NavLink to='/'>Влез в профила</NavLink></li>
+            <li><NavLink to='/register'>Регистрирай се</NavLink></li>
+            <li><NavLink to='/login'>Влез в профила</NavLink></li>
         </ul>
     )
 }
