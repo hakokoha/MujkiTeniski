@@ -21,3 +21,10 @@ body {
     padding-top: 70px;
     height: 320px;
 }
+
+.tshirt-name {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(102, 163, 187);
+    margin-top: 10px;
+}
