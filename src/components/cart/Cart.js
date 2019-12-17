@@ -24,7 +24,10 @@ class Cart extends Component {
         }
         
         let totalPrice = 0;
-        cartProducts.forEach(tshirt => totalPrice+=tshirt.price);
+        if(cartProducts.length > 0) {
+            cartProducts.forEach(tshirt => totalPrice+=tshirt.price)
+        }
+        
 
         const handleRemoveClick = (e) => {
             e.preventDefault();
