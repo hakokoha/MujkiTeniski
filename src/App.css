@@ -66,3 +66,9 @@ body {
 .total-price {
     font-size: 30px;
 }
+
+.order-made {
+    font-size: 30px;
+    color: rgb(102, 187, 106);
+    margin-top: -15px;
+}

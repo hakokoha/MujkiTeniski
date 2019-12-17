@@ -4,19 +4,27 @@ import { Redirect } from 'react-router-dom';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { cartAddRemove } from '../../store/actions/CartAddRemove';
+import { clearCart } from '../../store/actions/clearCart';
 
 class Cart extends Component {
+    state = {
+        msgContent: ''
+    }
+
     render() {
-        const { auth, profile, tshirts, cartAddRemove } = this.props;
+        const { auth, profile, tshirts, cartAddRemove, clearCart } = this.props;
         if(!auth.uid) return <Redirect to='/login' />
         let cartProducts = [];
-        profile.cart.forEach(tshirtId => {
-            cartProducts.push(tshirts.find(tshirt => tshirt.id === tshirtId))
-        });
+        if(profile.cart) {
+            profile.cart.forEach(tshirtId => {
+                if(tshirts) {
+                    cartProducts.push(tshirts.find(tshirt => tshirt.id === tshirtId))
+                }
+            });
+        }
+        
         let totalPrice = 0;
-        console.log('totalPrice', totalPrice)
         cartProducts.forEach(tshirt => totalPrice+=tshirt.price);
-        console.log('totalPrice', totalPrice)
 
         const handleRemoveClick = (e) => {
             e.preventDefault();
@@ -24,9 +32,22 @@ class Cart extends Component {
             cartAddRemove(tshirtId);
         }
 
+        const handleMakeOrder = (e) => {
+            e.preventDefault();
+            if(totalPrice !== 0)
+            {
+                this.setState({ msgContent: 'Поръчката беше успешно направена!' });
+                setTimeout(() => this.setState({ msgContent: '' }), 5000);
+                clearCart();
+                cartProducts = [];
+                totalPrice = 0;
+            }
+        }
+
         return (
             <div className="cart container">
                 <p className="your-cart">Твоята количка</p>
+                {this.state.msgContent !== '' ? <p className="order-made">{this.state.msgContent}</p> : null}
                 <ul className="collection">
                     {cartProducts && cartProducts.map(tshirt => {
                         return (
@@ -45,7 +66,7 @@ class Cart extends Component {
                         <p className="total-price">Обща цена: {totalPrice}</p>
                     </div>
                     <div className="buy-button">
-                        <button className="btn-large green lighten-1 buy-button">Купи</button>
+                        <button className="btn-large green lighten-1 buy-button" onClick={handleMakeOrder}>Купи</button>
                     </div>
                 </div>
             </div>
@@ -63,7 +84,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        cartAddRemove: (tshirtId) => dispatch(cartAddRemove(tshirtId))
+        cartAddRemove: (tshirtId) => dispatch(cartAddRemove(tshirtId)),
+        clearCart: () => dispatch(clearCart())
     }
 }
 

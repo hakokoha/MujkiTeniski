@@ -7,7 +7,7 @@ const LoggedLinks = (props) => {
     return (
         <ul className="right">
             <li><NavLink to='/'>Моят профил</NavLink></li>
-            <li><NavLink to='/cart'>Количка{(props.profileCart && props.profileCart.length > 0) ? <span class="new badge" data-badge-caption="продукта">{props.profileCart.length}</span> : null}</NavLink></li>
+            <li><NavLink to='/cart'>Количка{(props.profileCart && props.profileCart.length > 0) ? <span className="new badge" data-badge-caption="продукта">{props.profileCart.length}</span> : null}</NavLink></li>
             <li><a onClick={props.logout}>Отпиши се</a></li>
         </ul>
     )
