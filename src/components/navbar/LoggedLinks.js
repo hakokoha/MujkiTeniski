@@ -7,7 +7,7 @@ const LoggedLinks = (props) => {
     return (
         <ul className="right">
             <li><NavLink to='/'>Моят профил</NavLink></li>
-            <li><NavLink to='/'>Количка</NavLink></li>
+            <li><NavLink to='/cart'>Количка</NavLink></li>
             <li><a onClick={props.logout}>Отпиши се</a></li>
         </ul>
     )

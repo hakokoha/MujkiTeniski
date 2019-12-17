@@ -6,6 +6,7 @@ import HomePage from './components/homepage/HomePage';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import TshirtDetails from './components/tshirts/TshirtDetails';
+import Cart from './components/cart/Cart';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
           <Route path='/tshirts/:id' component={TshirtDetails} />
+          <Route path="/cart" component={Cart} />
         </Switch>
       </div>
     </BrowserRouter>
