@@ -39,7 +39,7 @@ class Register extends Component {
                         <input type="password" id="password" onChange={this.handleChange} />
                     </div>
                     <div className="register-login-field">
-                        <button className="btn green lighten-1 register-login-btn">Sign Up</button>
+                        <button className="btn green lighten-1 register-login-btn">Register</button>
                     </div>
                 </form>
             </div>
