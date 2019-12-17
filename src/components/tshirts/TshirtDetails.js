@@ -9,12 +9,15 @@ const TshirtDetails = (props) => {
     const { auth, profile, tshirt, cartAddRemove } = props;
     if(!auth.uid) return <Redirect to='/login' />
     const currentTshirtId = props.history.location.pathname.toString().split('/')[2];
-    const isTshirtInCart = profile.cart.includes(currentTshirtId);
+    const isTshirtInCart = profile.cart ? profile.cart.includes(currentTshirtId) : null;
 
     const handleRenewCart = (e) => {
         e.preventDefault();
         cartAddRemove(currentTshirtId);
     }
+
+    if(tshirt === null)
+        return <p></p>
 
     return (
         <div className="row tshirt-details">
