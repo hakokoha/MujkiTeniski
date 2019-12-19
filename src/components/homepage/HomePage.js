@@ -16,7 +16,7 @@ class HomePage extends Component {
                     {tshirts && tshirts.map(tshirt => {
                         return (
                             <Link to={'/tshirts/' + tshirt.id} key={tshirt.id}>
-                                <div className="col s12 m3 one-tshirt">
+                                <div className="col s12 m2 offset-m1 one-tshirt hoverable">
                                     <img src={tshirt.imgUrl} />
                                     <p className="tshirt-name">{tshirt.name} {tshirt.price}лв</p>
                                 </div>
