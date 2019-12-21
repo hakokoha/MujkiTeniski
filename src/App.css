@@ -23,7 +23,7 @@ body {
 
 .one-tshirt img {
     padding-top: 70px;
-    height: 320px;
+    width: 100%;
 }
 
 .tshirt-name {
