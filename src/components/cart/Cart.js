@@ -56,8 +56,9 @@ class Cart extends Component {
                         return (
                             <li className="collection-item avatar" id={tshirt.id} key={tshirt.id}>
                                 <img src={tshirt.imgUrl} alt="" className="circle" />
-                                <p>{tshirt.name} <br/>
-                                    {tshirt.price}
+                                <p> {tshirt.name} <br/>
+                                    Размер: {tshirt.id[tshirt.id.length-2] === 'X' ? 'XL' : tshirt.id[tshirt.id.length-1]} <br/>
+                                    Цена: {tshirt.price}
                                 </p>
                                 <a href="#" className="secondary-content" onClick={handleRemoveClick}><i className="material-icons small">delete</i></a>
                             </li>

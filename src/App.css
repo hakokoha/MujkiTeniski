@@ -28,32 +28,44 @@ body {
 
 .tshirt-name {
     font-weight: bold;
-    font-size: 17px;
-    color: rgb(102, 163, 187);
+    color: rgb(45, 45, 45);
     margin-top: 10px;
 }
 
-.tshirt-details-name {
+.tshirt-price {
     font-weight: bold;
-    font-size: 20px;
-    color: rgb(102, 163, 187);
-    margin-top: 8px;
+    color: rgb(45, 45, 45);
+    margin-top: -37px;
 }
 
-.tshirt-details-price {
+.tshirt-details-text {
     font-weight: bold;
     font-size: 20px;
     color: rgb(45, 45, 45);
-    margin-top: 6px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .tshirt-details {
     padding-top: 60px;
+    display: flex;
+    margin: 0 auto;
+    width: 22rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tshirt-details-name {
+    margin-left: 15px;
+}
+
+.tshirt-details-price {
+    margin-right: 15px;
 }
 
 .add-to-cart-btn {
-    margin-top: 10px;
-    margin-left: 60px;
+    margin-top: 20px;
 }
 
 .your-cart {

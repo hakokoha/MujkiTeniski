@@ -9,16 +9,21 @@ class HomePage extends Component {
         const { auth, tshirts } = this.props;
         console.log('props', this.props);
         console.log('tshirts', tshirts);
-        
+        let tshirtsToDisplay = null;
+        if(tshirts) {
+            tshirtsToDisplay = tshirts.filter(tshirt => tshirt.id[tshirt.id.length-1] === 'M');
+        }
+
         return (
             <div className="homepage container">
                 <div className="row">
-                    {tshirts && tshirts.map(tshirt => {
+                    {tshirtsToDisplay && tshirtsToDisplay.map(tshirt => {
                         return (
                             <Link to={'/tshirts/' + tshirt.id} key={tshirt.id}>
                                 <div className="col s12 m2 offset-m1 one-tshirt hoverable">
                                     <img src={tshirt.imgUrl} />
-                                    <p className="tshirt-name">{tshirt.name} {tshirt.price}лв</p>
+                                    <p className="tshirt-name">{tshirt.name}</p>
+                                    <p className="tshirt-price right">{tshirt.price}лв</p>
                                 </div>
                             </Link>
                         )
