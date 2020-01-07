@@ -88,3 +88,7 @@ body {
     color: rgb(102, 187, 106);
     margin-top: -15px;
 }
+
+.card-item-quantity {
+    margin-left: 200px;
+}

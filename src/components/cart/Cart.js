@@ -46,7 +46,6 @@ class Cart extends Component {
                 totalPrice = 0;
             }
         }
-
         return (
             <div className="cart container">
                 <p className="your-cart">Твоята количка</p>
@@ -56,10 +55,18 @@ class Cart extends Component {
                         return (
                             <li className="collection-item avatar" id={tshirt.id} key={tshirt.id}>
                                 <img src={tshirt.imgUrl} alt="" className="circle" />
-                                <p> {tshirt.name} <br/>
-                                    Размер: {tshirt.id[tshirt.id.length-2] === 'X' ? 'XL' : tshirt.id[tshirt.id.length-1]} <br/>
-                                    Цена: {tshirt.price}
-                                </p>
+                                <div className="row">
+                                    <p className="col"> {tshirt.name} <br/>
+                                        Размер: {tshirt.id[tshirt.id.length-2] === 'X' ? 'XL' : tshirt.id[tshirt.id.length-1]} <br/>
+                                        Цена: {tshirt.price}
+                                    </p>
+                                    <p>
+                                        <a href="#" className="col push-m9" onClick={null}><i className="material-icons small">arrow_drop_up</i></a> <br/>
+                                        <p className="col push-m8">&nbsp; Количество: 1</p> <br />
+                                        <a href="#" className="col push-m9" onClick={null}><i className="material-icons small">arrow_drop_down</i></a>
+                                    </p>
+                                        
+                                </div>
                                 <a href="#" className="secondary-content" onClick={handleRemoveClick}><i className="material-icons small">delete</i></a>
                             </li>
                         )
