@@ -1,94 +1,90 @@
 body {
-    background-color: rgb(240, 240, 240);
-}
-
-.homepage {
-    margin-left: 260px;
+  background-color: rgb(240, 240, 240);
 }
 
 .register-login-text {
-    font-size: 50px;
-    padding-left: 400px;
+  font-size: 50px;
+  padding-left: 400px;
 }
 
 .register-login-field {
-    font-size: 25px;
-    padding-left: 405px;
-    margin-right: 600px;
+  font-size: 25px;
+  padding-left: 405px;
+  margin-right: 600px;
 }
 
 .register-login-btn {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .one-tshirt img {
-    padding-top: 70px;
-    width: 100%;
+  padding-top: 70px;
+  width: 100%;
 }
 
 .tshirt-name {
-    font-weight: bold;
-    color: rgb(45, 45, 45);
-    margin-top: 10px;
+  font-weight: bold;
+  color: rgb(45, 45, 45);
+  margin-top: 10px;
 }
 
 .tshirt-price {
-    font-weight: bold;
-    color: rgb(45, 45, 45);
-    margin-top: -37px;
+  font-weight: bold;
+  color: rgb(45, 45, 45);
+  margin-top: -37px;
 }
 
 .tshirt-details-text {
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(45, 45, 45);
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(45, 45, 45);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .tshirt-details {
-    padding-top: 60px;
-    display: flex;
-    margin: 0 auto;
-    width: 22rem;
-    flex-direction: column;
-    align-items: center;
+  padding-top: 60px;
+  display: flex;
+  margin: 0 auto;
+  width: 22rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tshirt-details-name {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .tshirt-details-price {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .add-to-cart-btn {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .your-cart {
-    font-size: 50px;
-    color: rgb(102, 163, 187);
+  font-size: 50px;
+  color: rgb(102, 163, 187);
 }
 
 .buy-button {
-    text-align: right;
-    margin-right: 5px;
-    margin-top: 20px;
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 20px;
 }
 
 .total-price {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .order-made {
-    font-size: 30px;
-    color: rgb(102, 187, 106);
-    margin-top: -15px;
+  font-size: 30px;
+  color: rgb(102, 187, 106);
+  margin-top: -15px;
 }
 
 .card-item-quantity {
-    margin-left: 200px;
+  margin-left: 200px;
 }
